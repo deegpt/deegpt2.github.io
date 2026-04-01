@@ -170,13 +170,21 @@
       width: 100%;
     }
 
+    /* ── 2-column side-by-side grid ── */
     .posts {
-      gap: 2rem;
+      display: grid !important;
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 2rem !important;
+      width: 100%;
     }
 
     .posts article {
       padding-bottom: 1rem;
       transition: transform .2s ease, box-shadow .2s ease;
+      /* reset any float/width overrides from main.css */
+      float: none !important;
+      width: auto !important;
+      margin: 0 !important;
     }
 
     .posts article:hover {
@@ -231,22 +239,9 @@
       background-size: cover;
       background-position: center;
       display: block;
-      min-height: 260px;
+      min-height: 200px;
       position: relative;
       overflow: hidden;
-      transition: background-size 0.55s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .thumb::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-size: cover;
-      background-position: center;
-      background-image: inherit;
-      transform: scale(1);
-      transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
-      z-index: 0;
     }
 
     .thumb::after {
@@ -345,12 +340,18 @@
       background: #f7f9fc;
     }
 
+    /* ── Responsive breakpoints ── */
     @media screen and (max-width: 980px) {
       .hero-panel {
         grid-template-columns: 1fr;
       }
       .hero-summary {
         margin-top: -2rem;
+      }
+      /* Keep 2 cols on tablet */
+      .posts {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.25rem !important;
       }
     }
 
@@ -372,6 +373,10 @@
       .project-meta {
         margin-left: 1.25rem;
         margin-right: 1.25rem;
+      }
+      /* Single column on mobile */
+      .posts {
+        grid-template-columns: 1fr !important;
       }
     }
   </style>
@@ -413,7 +418,7 @@
         <div>
           <span class="section-kicker">Profile</span>
           <h2>Analytics projects built around real business questions</h2>
-          <p>This homepage refresh focuses on recent GitHub work, clearer storytelling and a cleaner presentation for recruiters, hiring managers and collaborators. The layout keeps your original navigation but makes the homepage feel more current, structured and portfolio-ready.</p>
+          <p>This homepage refresh focuses on recent GitHub work, clearer storytelling and a cleaner presentation for recruiters, hiring managers and collaborators.</p>
         </div>
         <div>
           <span class="section-kicker">Highlights</span>
@@ -430,7 +435,7 @@
       <div id="projects" class="project-section-title">
         <span class="section-kicker">Featured Work</span>
         <h2>Selected projects from GitHub</h2>
-        <p>A modernized homepage preview using your recent repositories as the main portfolio content while preserving the same repo structure and navigation.</p>
+        <p>Recent repositories showcasing operational analytics, SQL, Python and data warehousing skills.</p>
       </div>
 
       <article class="post featured">
@@ -438,7 +443,7 @@
           <h2><a href="https://github.com/deegpt/Operational-escalation-SLA-CSAT-Analysis" target="_blank" rel="noopener noreferrer">Operational Escalation, SLA &amp; CSAT Analysis</a></h2>
           <p>An operational analytics case study that examines escalation drivers, SLA breaches, repeat contacts and customer satisfaction to identify process improvement opportunities in a FinTech support environment.</p>
         </header>
-        <a href="https://github.com/deegpt/Operational-escalation-SLA-CSAT-Analysis" target="_blank" rel="noopener noreferrer" class="image main thumb" style="position:relative;overflow:hidden;display:block;min-height:260px;">
+        <a href="https://github.com/deegpt/Operational-escalation-SLA-CSAT-Analysis" target="_blank" rel="noopener noreferrer" class="image main thumb" style="position:relative;overflow:hidden;display:block;min-height:320px;">
           <div class="thumb-bg" style="background-image:url('https://pplx-res.cloudinary.com/image/upload/pplx_search_images/8103f03f6e115d8ee469e6c7735c5574cd464511.jpg');"></div>
           <div class="thumb-overlay"><span>View Project</span></div>
           <span class="thumb-label">Featured Project</span>
@@ -459,11 +464,11 @@
           <header>
             <h2><a href="https://github.com/deegpt/vendor-performance-Data-Analysis-project" target="_blank" rel="noopener noreferrer">Vendor Performance Data Analysis</a></h2>
           </header>
-          <a href="https://github.com/deegpt/vendor-performance-Data-Analysis-project" target="_blank" rel="noopener noreferrer" class="image fit thumb" style="position:relative;overflow:hidden;display:block;min-height:260px;">
-          <div class="thumb-bg" style="background-image:url('https://pplx-res.cloudinary.com/image/upload/pplx_search_images/4b562ee84ad5216425210a5a5feb345a7d219769.jpg');"></div>
-          <div class="thumb-overlay"><span>View Project</span></div>
-          <span class="thumb-label">Python + SQL</span>
-        </a>
+          <a href="https://github.com/deegpt/vendor-performance-Data-Analysis-project" target="_blank" rel="noopener noreferrer" class="image fit thumb" style="position:relative;overflow:hidden;display:block;min-height:200px;">
+            <div class="thumb-bg" style="background-image:url('https://pplx-res.cloudinary.com/image/upload/pplx_search_images/4b562ee84ad5216425210a5a5feb345a7d219769.jpg');"></div>
+            <div class="thumb-overlay"><span>View Project</span></div>
+            <span class="thumb-label">Python + SQL</span>
+          </a>
           <div class="project-meta">
             <span>EDA</span>
             <span>Data Cleaning</span>
@@ -479,11 +484,11 @@
           <header>
             <h2><a href="https://github.com/deegpt/restaurant-success-data-analysis-project" target="_blank" rel="noopener noreferrer">Restaurant Success Data Analysis</a></h2>
           </header>
-          <a href="https://github.com/deegpt/restaurant-success-data-analysis-project" target="_blank" rel="noopener noreferrer" class="image fit thumb" style="position:relative;overflow:hidden;display:block;min-height:260px;">
-          <div class="thumb-bg" style="background-image:url('https://pplx-res.cloudinary.com/image/upload/pplx_search_images/5bd15e8b3af2f28aacf99f405fdeff48f95f4e45.jpg');"></div>
-          <div class="thumb-overlay"><span>View Project</span></div>
-          <span class="thumb-label">SQLite + Python</span>
-        </a>
+          <a href="https://github.com/deegpt/restaurant-success-data-analysis-project" target="_blank" rel="noopener noreferrer" class="image fit thumb" style="position:relative;overflow:hidden;display:block;min-height:200px;">
+            <div class="thumb-bg" style="background-image:url('https://pplx-res.cloudinary.com/image/upload/pplx_search_images/5bd15e8b3af2f28aacf99f405fdeff48f95f4e45.jpg');"></div>
+            <div class="thumb-overlay"><span>View Project</span></div>
+            <span class="thumb-label">SQLite + Python</span>
+          </a>
           <div class="project-meta">
             <span>Customer Reviews</span>
             <span>Check-ins</span>
@@ -499,11 +504,11 @@
           <header>
             <h2><a href="https://github.com/deegpt/sql-data-warehouse-project" target="_blank" rel="noopener noreferrer">SQL Data Warehouse Project</a></h2>
           </header>
-          <a href="https://github.com/deegpt/sql-data-warehouse-project" target="_blank" rel="noopener noreferrer" class="image fit thumb" style="position:relative;overflow:hidden;display:block;min-height:260px;">
-          <div class="thumb-bg" style="background-image:url('https://pplx-res.cloudinary.com/image/upload/pplx_search_images/15d3d5f17612e5a9264797c8f8c5b2a45e8d7aaa.jpg');"></div>
-          <div class="thumb-overlay"><span>View Project</span></div>
-          <span class="thumb-label">SQL Server</span>
-        </a>
+          <a href="https://github.com/deegpt/sql-data-warehouse-project" target="_blank" rel="noopener noreferrer" class="image fit thumb" style="position:relative;overflow:hidden;display:block;min-height:200px;">
+            <div class="thumb-bg" style="background-image:url('https://pplx-res.cloudinary.com/image/upload/pplx_search_images/15d3d5f17612e5a9264797c8f8c5b2a45e8d7aaa.jpg');"></div>
+            <div class="thumb-overlay"><span>View Project</span></div>
+            <span class="thumb-label">SQL Server</span>
+          </a>
           <div class="project-meta">
             <span>ETL</span>
             <span>Data Modeling</span>
@@ -519,11 +524,11 @@
           <header>
             <h2><a href="https://github.com/deegpt/sql-data-analytics--datawarehouse-extended--project" target="_blank" rel="noopener noreferrer">SQL Data Analytics Extended</a></h2>
           </header>
-          <a href="https://github.com/deegpt/sql-data-analytics--datawarehouse-extended--project" target="_blank" rel="noopener noreferrer" class="image fit thumb" style="position:relative;overflow:hidden;display:block;min-height:260px;">
-          <div class="thumb-bg" style="background-image:url('https://pplx-res.cloudinary.com/image/upload/pplx_search_images/d1db41a0cb43be08cfb5158eb08c1194dccca943.jpg');"></div>
-          <div class="thumb-overlay"><span>View Project</span></div>
-          <span class="thumb-label">Advanced SQL</span>
-        </a>
+          <a href="https://github.com/deegpt/sql-data-analytics--datawarehouse-extended--project" target="_blank" rel="noopener noreferrer" class="image fit thumb" style="position:relative;overflow:hidden;display:block;min-height:200px;">
+            <div class="thumb-bg" style="background-image:url('https://pplx-res.cloudinary.com/image/upload/pplx_search_images/d1db41a0cb43be08cfb5158eb08c1194dccca943.jpg');"></div>
+            <div class="thumb-overlay"><span>View Project</span></div>
+            <span class="thumb-label">Advanced SQL</span>
+          </a>
           <div class="project-meta">
             <span>Cumulative Analysis</span>
             <span>Segmentation</span>
@@ -539,11 +544,11 @@
           <header>
             <h2><a href="https://github.com/deegpt/PortfolioProjects" target="_blank" rel="noopener noreferrer">PortfolioProjects</a></h2>
           </header>
-          <a href="https://github.com/deegpt/PortfolioProjects" target="_blank" rel="noopener noreferrer" class="image fit thumb" style="position:relative;overflow:hidden;display:block;min-height:260px;">
-          <div class="thumb-bg" style="background-image:url('https://pplx-res.cloudinary.com/image/upload/pplx_search_images/398f36ba5e4e5809bec2746638bf0d0367c66466.jpg');"></div>
-          <div class="thumb-overlay"><span>View Project</span></div>
-          <span class="thumb-label">Legacy Work</span>
-        </a>
+          <a href="https://github.com/deegpt/PortfolioProjects" target="_blank" rel="noopener noreferrer" class="image fit thumb" style="position:relative;overflow:hidden;display:block;min-height:200px;">
+            <div class="thumb-bg" style="background-image:url('https://pplx-res.cloudinary.com/image/upload/pplx_search_images/398f36ba5e4e5809bec2746638bf0d0367c66466.jpg');"></div>
+            <div class="thumb-overlay"><span>View Project</span></div>
+            <span class="thumb-label">Legacy Work</span>
+          </a>
           <div class="project-meta">
             <span>SQL</span>
             <span>Python</span>
@@ -582,7 +587,7 @@
     </footer>
 
     <div id="copyright">
-      <ul><li>&copy; Deepak Gupta</li><li>Homepage redesign with analytics thumbnails</li></ul>
+      <ul><li>&copy; Deepak Gupta</li><li>Data Analyst Portfolio</li></ul>
     </div>
   </div>
 
