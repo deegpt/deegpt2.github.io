@@ -1,170 +1,597 @@
 <!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
-	<head>
-		<title>Deepak Gupta Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<head>
+  <title>Deepak Gupta Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <meta name="description" content="Deepak Gupta portfolio featuring data analytics, SQL, Python, Power BI and operational analytics projects." />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <style>
+    :root {
+      --ink: #172033;
+      --muted: #5f6b85;
+      --accent: #2f6fed;
+      --accent-soft: rgba(47, 111, 237, 0.12);
+      --surface: #ffffff;
+      --surface-2: #f5f7fb;
+      --border: rgba(23, 32, 51, 0.10);
+      --shadow: 0 20px 60px rgba(23, 32, 51, 0.08);
+      --radius: 18px;
+    }
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+    body {
+      background: linear-gradient(180deg, #eef3fb 0%, #f8fafd 30%, #ffffff 100%);
+      color: var(--ink);
+    }
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>Deepak's <br />Portfolio<br />
-						</h1>
-						<p>Data Analyst Aspirant skilled in SQL, Tableau, Python and Excel <a href="https://github.com/deegpt">@deegpt</a>
-						
-					</div>
+    #intro {
+      background:
+        radial-gradient(circle at top right, rgba(47,111,237,.18), transparent 30%),
+        radial-gradient(circle at left 20%, rgba(40,167,69,.10), transparent 35%),
+        linear-gradient(135deg, #172033 0%, #22314d 100%);
+      min-height: 72vh;
+      padding: 6rem 2rem 4rem 2rem;
+    }
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Projects</a>
-					</header>
+    #intro h1 {
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      line-height: 1.02;
+      margin-bottom: 1rem;
+      letter-spacing: -0.03em;
+    }
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">Projects</a></li>
-							
-						</ul>
-						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/deepak-gupta-507049112/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-									<li><a href="https://github.com/deegpt" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
+    #intro p {
+      max-width: 780px;
+      margin: 0 auto 1.5rem auto;
+      color: rgba(255,255,255,.82);
+      font-size: 1.05rem;
+    }
 
-				<!-- Main -->
-					<div id="main">
+    #intro .hero-badges {
+      display: flex;
+      gap: .75rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 2rem 0 2.5rem 0;
+    }
 
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									
-									<h2><a href="https://github.com/deegpt/PortfolioProjects/blob/main/SQLDataCleaningPortfolioProject3.sql">Data Cleaning in SQL</a></h2>
-									<p>In this project we clean and explore Nashville Housing dataset in Microsoft SQL Server.</p>
-								</header>
-								<a href="https://github.com/deegpt/PortfolioProjects/blob/main/SQLDataCleaningPortfolioProject3.sql" class="image main"><img src="images/Housing3.jpg" alt="" /></a>
-								<ul class="actions special">
-									<li><a href="https://github.com/deegpt/PortfolioProjects/blob/main/SQLDataCleaningPortfolioProject3.sql" class="button large">View Project</a></li>
-								</ul>
-							</article>
+    #intro .hero-badges span {
+      border: 1px solid rgba(255,255,255,.18);
+      background: rgba(255,255,255,.08);
+      color: #fff;
+      padding: .65rem 1rem;
+      border-radius: 999px;
+      font-size: .9rem;
+      letter-spacing: .02em;
+    }
 
-						<!-- Posts -->
-							<section class="posts">
-								<article>
-									<header>
-										
-										<h2><a href="https://github.com/deegpt/PortfolioProjects/blob/main/SQLPortfolioProject1.sql">Data exploration in SQL</a></h2>
-									</header>
-									<a href="https://github.com/deegpt/PortfolioProjects/blob/main/SQLPortfolioProject1.sql" class="image fit"><img src="images/covid-19.jpg" alt="" /></a>
-									<p>Data Exploration of COVID '19 Dataset in Microsoft SQL Server</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/deegpt/PortfolioProjects/blob/main/SQLPortfolioProject1.sql" class="button">View Project</a></li>
-									</ul>
-								</article>
+    #intro .actions {
+      justify-content: center;
+    }
 
+    #header .logo {
+      border-color: rgba(255,255,255,.2) !important;
+      color: #fff !important;
+    }
 
-								<article>
-									<header>
-										
-										<h2><a href="https://public.tableau.com/app/profile/deepak1415/viz/COVIDTableauDashboard_16596578146670/Dashboard1?publish=yes">Tableau Dashboard<br />
-										</a></h2>
-									</header>
-									<a href="https://public.tableau.com/app/profile/deepak1415/viz/COVIDTableauDashboard_16596578146670/Dashboard1?publish=yes" class="image fit"><img src="images/Tableau-Visualization.jpg" alt="" /></a>
-									<p>COVID '19 Global dataset Visualization in Tableau </p>
-									<ul class="actions special">
-										<li><a href="https://public.tableau.com/app/profile/deepak1415/viz/COVIDTableauDashboard_16596578146670/Dashboard1?publish=yes" class="button">View Project</a></li>
-									</ul>
-								</article>
+    #nav {
+      backdrop-filter: blur(12px);
+      background: rgba(255,255,255,.84);
+      border-bottom: 1px solid rgba(23, 32, 51, 0.08);
+    }
 
-								
-								<article>
-									<header>
-										
-										<h2><a href="https://github.com/deegpt/PortfolioProjects/blob/main/Movie%20Correlation%20Project.ipynb">Movie Correlation Project
-										</a></h2>
-									</header>
-									<a href="https://github.com/deegpt/PortfolioProjects/blob/main/Movie%20Correlation%20Project.ipynb" class="image fit"><img src="images/Python.jpg" alt="" /></a>
-									<p>This shows correlation of available data in the Movie dataset from Kaggle using Python.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/deegpt/PortfolioProjects/blob/main/Movie%20Correlation%20Project.ipynb" class="button">View Project</a></li>
-									</ul>
-								</article>
+    #nav ul.links li.active a,
+    #nav ul.links li a:hover {
+      color: var(--accent) !important;
+    }
 
+    #main {
+      background: transparent;
+      padding-top: 0;
+    }
 
-								<article>
-									<header>
-										
-										<h2><a href="https://jovian.ai/deepak-gupta15336/eda-stackoverflow-survey">EDA on StackOverflow Survey</a></h2>
-									</header>
-									<a href="https://jovian.ai/deepak-gupta15336/eda-stackoverflow-survey" class="image fit"><img src="images/stackoverflow.jpg" alt="" /></a>
-									<p>This Project represents an Exploratory Data Analysis on the StackOverflow Developer Survey 2020.</p>
-									<ul class="actions special">
-										<li><a href="https://jovian.ai/deepak-gupta15336/eda-stackoverflow-survey" class="button">View Project</a></li>
-									</ul>
-								</article>
+    .hero-summary {
+      margin-top: -4rem;
+      padding: 0 2rem 2rem 2rem;
+      position: relative;
+      z-index: 2;
+    }
 
-								
+    .hero-panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 1.5rem;
+    }
 
-						
+    .hero-panel h2 {
+      font-size: 1.35rem;
+      margin-bottom: .6rem;
+      letter-spacing: -0.02em;
+    }
 
-					</div>
+    .hero-panel p,
+    .hero-panel li {
+      color: var(--muted);
+      margin-bottom: 0;
+    }
 
-				<!-- Footer -->
-					<footer id="footer">
-					
-						<section class="split contact">
-							<section class="alt">
-								<h3>Location</h3>
-								<p>Mayur Vihar, Phase-3<br />
-								New Delhi, India, 110096</p>
-							</section>
+    .hero-panel ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
 
-							<section>
-								<h3>Phone</h3>
-								<p><a href="#">8191817413</p>
-							</section>
+    .hero-panel li {
+      padding: .5rem 0;
+      border-bottom: 1px solid rgba(23,32,51,.08);
+    }
 
-							<section>
-								<h3>Email</h3>
-								<p><a href="#">deegupta1565@gmail.com</a></p>
-							</section>
+    .hero-panel li:last-child {
+      border-bottom: 0;
+    }
 
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									
-									<li><a href="https://www.linkedin.com/in/deepak-gupta-507049112/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-									<li><a href="https://github.com/deegpt" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
+    .section-kicker {
+      display: inline-block;
+      background: var(--accent-soft);
+      color: var(--accent);
+      padding: .35rem .7rem;
+      border-radius: 999px;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: .9rem;
+    }
 
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div>
+    .post.featured,
+    .posts article {
+      border: 1px solid var(--border) !important;
+      background: var(--surface) !important;
+      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
 
-			</div>
+    .post.featured {
+      margin-bottom: 3rem;
+    }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+    .post.featured .image.main img,
+    .posts .image.fit img {
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      width: 100%;
+    }
 
-	</body>
-</html> 
+    .posts {
+      gap: 2rem;
+    }
+
+    .posts article {
+      padding-bottom: 1rem;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .posts article:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 22px 70px rgba(23,32,51,.14);
+    }
+
+    .posts article header,
+    .post.featured header {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+    .posts article p,
+    .post.featured p {
+      color: var(--muted);
+    }
+
+    .project-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+      margin: 0 2rem 1rem 2rem;
+    }
+
+    .project-meta span {
+      background: #f1f4fb;
+      color: #42506d;
+      border-radius: 999px;
+      padding: .45rem .75rem;
+      font-size: .78rem;
+      font-weight: 600;
+      letter-spacing: .02em;
+    }
+
+    .project-section-title {
+      padding: 0 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .project-section-title h2 {
+      margin-bottom: .5rem;
+      letter-spacing: -0.03em;
+    }
+
+    .project-section-title p {
+      color: var(--muted);
+      max-width: 760px;
+    }
+
+    .thumb {
+      background-size: cover;
+      background-position: center;
+      display: block;
+      min-height: 260px;
+      position: relative;
+      overflow: hidden;
+      transition: background-size 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .thumb::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      background-image: inherit;
+      transform: scale(1);
+      transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 0;
+    }
+
+    .thumb::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(19,27,43,.10) 0%, rgba(19,27,43,.55) 100%);
+      transition: background 0.4s ease;
+      z-index: 1;
+    }
+
+    .posts article:hover .thumb::after,
+    .post.featured:hover .thumb::after {
+      background: linear-gradient(180deg, rgba(47,111,237,.18) 0%, rgba(19,27,43,.72) 100%);
+    }
+
+    .thumb-label {
+      position: absolute;
+      left: 1.25rem;
+      bottom: 1.25rem;
+      z-index: 2;
+      background: rgba(255,255,255,.92);
+      color: var(--ink);
+      padding: .55rem .8rem;
+      border-radius: 999px;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      transform: translateY(0);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                  background 0.3s ease,
+                  color 0.3s ease;
+    }
+
+    .posts article:hover .thumb-label,
+    .post.featured:hover .thumb-label {
+      background: var(--accent);
+      color: #fff;
+      transform: translateY(-4px);
+    }
+
+    .thumb-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+      opacity: 0;
+      transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .thumb-overlay span {
+      background: rgba(255,255,255,.95);
+      color: var(--accent);
+      border-radius: 999px;
+      padding: .65rem 1.4rem;
+      font-size: .82rem;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      box-shadow: 0 8px 32px rgba(47,111,237,.22);
+      transform: scale(0.88) translateY(8px);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                  opacity 0.35s ease;
+    }
+
+    .posts article:hover .thumb-overlay,
+    .post.featured:hover .thumb-overlay {
+      opacity: 1;
+    }
+
+    .posts article:hover .thumb-overlay span,
+    .post.featured:hover .thumb-overlay span {
+      transform: scale(1) translateY(0);
+    }
+
+    .thumb-bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      transform: scale(1);
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 0;
+    }
+
+    .posts article:hover .thumb-bg,
+    .post.featured:hover .thumb-bg {
+      transform: scale(1.07);
+    }
+
+    #footer {
+      border-top: 1px solid var(--border);
+      background: #f7f9fc;
+    }
+
+    @media screen and (max-width: 980px) {
+      .hero-panel {
+        grid-template-columns: 1fr;
+      }
+      .hero-summary {
+        margin-top: -2rem;
+      }
+    }
+
+    @media screen and (max-width: 736px) {
+      #intro {
+        padding-top: 5rem;
+      }
+      .hero-summary,
+      .project-section-title {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+      .hero-panel,
+      .posts article header,
+      .post.featured header {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+      }
+      .project-meta {
+        margin-left: 1.25rem;
+        margin-right: 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body class="is-preload">
+  <div id="wrapper" class="fade-in">
+
+    <div id="intro">
+      <h1>Deepak Gupta<br />Data Analyst Portfolio</h1>
+      <p>Operational analytics, SQL, Python and dashboard projects focused on business impact, process improvement and decision-ready insights.</p>
+      <div class="hero-badges">
+        <span>SQL</span>
+        <span>Python</span>
+        <span>Power BI</span>
+        <span>Operational Analytics</span>
+        <span>Business Intelligence</span>
+      </div>
+      <ul class="actions stacked">
+        <li><a href="#projects" class="button primary icon solid fa-folder-open">View Projects</a></li>
+      </ul>
+    </div>
+
+    <header id="header">
+      <a href="index.html" class="logo">Projects</a>
+    </header>
+
+    <nav id="nav">
+      <ul class="links">
+        <li class="active"><a href="index.html">Projects</a></li>
+      </ul>
+      <ul class="icons">
+        <li><a href="https://www.linkedin.com/in/deepak-gupta-507049112/" target="_blank" rel="noopener noreferrer" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+        <li><a href="https://github.com/deegpt" target="_blank" rel="noopener noreferrer" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+      </ul>
+    </nav>
+
+    <div class="hero-summary">
+      <section class="hero-panel">
+        <div>
+          <span class="section-kicker">Profile</span>
+          <h2>Analytics projects built around real business questions</h2>
+          <p>This homepage refresh focuses on recent GitHub work, clearer storytelling and a cleaner presentation for recruiters, hiring managers and collaborators. The layout keeps your original navigation but makes the homepage feel more current, structured and portfolio-ready.</p>
+        </div>
+        <div>
+          <span class="section-kicker">Highlights</span>
+          <ul>
+            <li>Recent analytics repositories prioritized over older practice work.</li>
+            <li>Project descriptions rewritten to emphasize tools, business context and outcomes.</li>
+            <li>Every card links directly to the matching GitHub repository.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <div id="main">
+      <div id="projects" class="project-section-title">
+        <span class="section-kicker">Featured Work</span>
+        <h2>Selected projects from GitHub</h2>
+        <p>A modernized homepage preview using your recent repositories as the main portfolio content while preserving the same repo structure and navigation.</p>
+      </div>
+
+      <article class="post featured">
+        <header class="major">
+          <h2><a href="https://github.com/deegpt/Operational-escalation-SLA-CSAT-Analysis" target="_blank" rel="noopener noreferrer">Operational Escalation, SLA &amp; CSAT Analysis</a></h2>
+          <p>An operational analytics case study that examines escalation drivers, SLA breaches, repeat contacts and customer satisfaction to identify process improvement opportunities in a FinTech support environment.</p>
+        </header>
+        <a href="https://github.com/deegpt/Operational-escalation-SLA-CSAT-Analysis" target="_blank" rel="noopener noreferrer" class="image main thumb" style="position:relative;overflow:hidden;display:block;min-height:260px;">
+          <div class="thumb-bg" style="background-image:url('https://pplx-res.cloudinary.com/image/upload/pplx_search_images/8103f03f6e115d8ee469e6c7735c5574cd464511.jpg');"></div>
+          <div class="thumb-overlay"><span>View Project</span></div>
+          <span class="thumb-label">Featured Project</span>
+        </a>
+        <div class="project-meta">
+          <span>Jupyter Notebook</span>
+          <span>Support Analytics</span>
+          <span>SLA &amp; CSAT</span>
+          <span>Operations</span>
+        </div>
+        <ul class="actions special">
+          <li><a href="https://github.com/deegpt/Operational-escalation-SLA-CSAT-Analysis" target="_blank" rel="noopener noreferrer" class="button large">View Project</a></li>
+        </ul>
+      </article>
+
+      <section class="posts">
+        <article>
+          <header>
+            <h2><a href="https://github.com/deegpt/vendor-performance-Data-Analysis-project" target="_blank" rel="noopener noreferrer">Vendor Performance Data Analysis</a></h2>
+          </header>
+          <a href="https://github.com/deegpt/vendor-performance-Data-Analysis-project" target="_blank" rel="noopener noreferrer" class="image fit thumb" style="position:relative;overflow:hidden;display:block;min-height:260px;">
+          <div class="thumb-bg" style="background-image:url('https://pplx-res.cloudinary.com/image/upload/pplx_search_images/4b562ee84ad5216425210a5a5feb345a7d219769.jpg');"></div>
+          <div class="thumb-overlay"><span>View Project</span></div>
+          <span class="thumb-label">Python + SQL</span>
+        </a>
+          <div class="project-meta">
+            <span>EDA</span>
+            <span>Data Cleaning</span>
+            <span>Business Questions</span>
+          </div>
+          <p>An end-to-end analytics project using Python and SQL to explore vendor data, clean records, answer business questions and interpret findings in a structured analysis workflow.</p>
+          <ul class="actions special">
+            <li><a href="https://github.com/deegpt/vendor-performance-Data-Analysis-project" target="_blank" rel="noopener noreferrer" class="button">View Project</a></li>
+          </ul>
+        </article>
+
+        <article>
+          <header>
+            <h2><a href="https://github.com/deegpt/restaurant-success-data-analysis-project" target="_blank" rel="noopener noreferrer">Restaurant Success Data Analysis</a></h2>
+          </header>
+          <a href="https://github.com/deegpt/restaurant-success-data-analysis-project" target="_blank" rel="noopener noreferrer" class="image fit thumb" style="position:relative;overflow:hidden;display:block;min-height:260px;">
+          <div class="thumb-bg" style="background-image:url('https://pplx-res.cloudinary.com/image/upload/pplx_search_images/5bd15e8b3af2f28aacf99f405fdeff48f95f4e45.jpg');"></div>
+          <div class="thumb-overlay"><span>View Project</span></div>
+          <span class="thumb-label">SQLite + Python</span>
+        </a>
+          <div class="project-meta">
+            <span>Customer Reviews</span>
+            <span>Check-ins</span>
+            <span>Business Outcomes</span>
+          </div>
+          <p>A data analysis project exploring how engagement metrics such as reviews, tips and check-ins relate to ratings and review volume as indicators of restaurant success.</p>
+          <ul class="actions special">
+            <li><a href="https://github.com/deegpt/restaurant-success-data-analysis-project" target="_blank" rel="noopener noreferrer" class="button">View Project</a></li>
+          </ul>
+        </article>
+
+        <article>
+          <header>
+            <h2><a href="https://github.com/deegpt/sql-data-warehouse-project" target="_blank" rel="noopener noreferrer">SQL Data Warehouse Project</a></h2>
+          </header>
+          <a href="https://github.com/deegpt/sql-data-warehouse-project" target="_blank" rel="noopener noreferrer" class="image fit thumb" style="position:relative;overflow:hidden;display:block;min-height:260px;">
+          <div class="thumb-bg" style="background-image:url('https://pplx-res.cloudinary.com/image/upload/pplx_search_images/15d3d5f17612e5a9264797c8f8c5b2a45e8d7aaa.jpg');"></div>
+          <div class="thumb-overlay"><span>View Project</span></div>
+          <span class="thumb-label">SQL Server</span>
+        </a>
+          <div class="project-meta">
+            <span>ETL</span>
+            <span>Data Modeling</span>
+            <span>Warehouse Design</span>
+          </div>
+          <p>A modern data warehouse project in SQL Server covering ETL flows, data modeling and analytics-ready structures for scalable reporting and downstream analysis.</p>
+          <ul class="actions special">
+            <li><a href="https://github.com/deegpt/sql-data-warehouse-project" target="_blank" rel="noopener noreferrer" class="button">View Project</a></li>
+          </ul>
+        </article>
+
+        <article>
+          <header>
+            <h2><a href="https://github.com/deegpt/sql-data-analytics--datawarehouse-extended--project" target="_blank" rel="noopener noreferrer">SQL Data Analytics Extended</a></h2>
+          </header>
+          <a href="https://github.com/deegpt/sql-data-analytics--datawarehouse-extended--project" target="_blank" rel="noopener noreferrer" class="image fit thumb" style="position:relative;overflow:hidden;display:block;min-height:260px;">
+          <div class="thumb-bg" style="background-image:url('https://pplx-res.cloudinary.com/image/upload/pplx_search_images/d1db41a0cb43be08cfb5158eb08c1194dccca943.jpg');"></div>
+          <div class="thumb-overlay"><span>View Project</span></div>
+          <span class="thumb-label">Advanced SQL</span>
+        </a>
+          <div class="project-meta">
+            <span>Cumulative Analysis</span>
+            <span>Segmentation</span>
+            <span>Performance Analysis</span>
+          </div>
+          <p>A collection of SQL analytics scripts demonstrating changes over time, segmentation logic, cumulative analysis, part-to-whole analysis and business performance techniques.</p>
+          <ul class="actions special">
+            <li><a href="https://github.com/deegpt/sql-data-analytics--datawarehouse-extended--project" target="_blank" rel="noopener noreferrer" class="button">View Project</a></li>
+          </ul>
+        </article>
+
+        <article>
+          <header>
+            <h2><a href="https://github.com/deegpt/PortfolioProjects" target="_blank" rel="noopener noreferrer">PortfolioProjects</a></h2>
+          </header>
+          <a href="https://github.com/deegpt/PortfolioProjects" target="_blank" rel="noopener noreferrer" class="image fit thumb" style="position:relative;overflow:hidden;display:block;min-height:260px;">
+          <div class="thumb-bg" style="background-image:url('https://pplx-res.cloudinary.com/image/upload/pplx_search_images/398f36ba5e4e5809bec2746638bf0d0367c66466.jpg');"></div>
+          <div class="thumb-overlay"><span>View Project</span></div>
+          <span class="thumb-label">Legacy Work</span>
+        </a>
+          <div class="project-meta">
+            <span>SQL</span>
+            <span>Python</span>
+            <span>Visualization</span>
+          </div>
+          <p>A legacy collection of earlier portfolio work that still shows the foundation of your SQL, Python and data visualization journey across multiple practice projects.</p>
+          <ul class="actions special">
+            <li><a href="https://github.com/deegpt/PortfolioProjects" target="_blank" rel="noopener noreferrer" class="button">View Project</a></li>
+          </ul>
+        </article>
+      </section>
+    </div>
+
+    <footer id="footer">
+      <section class="split contact">
+        <section class="alt">
+          <h3>Location</h3>
+          <p>Noida Extension<br />Uttar Pradesh, 201310</p>
+        </section>
+        <section>
+          <h3>Phone</h3>
+          <p><a href="tel:+918191817413">8191817413</a></p>
+        </section>
+        <section>
+          <h3>Email</h3>
+          <p><a href="mailto:deegupta1565@gmail.com">deegupta1565@gmail.com</a></p>
+        </section>
+        <section>
+          <h3>Social</h3>
+          <ul class="icons alt">
+            <li><a href="https://www.linkedin.com/in/deepak-gupta-507049112/" target="_blank" rel="noopener noreferrer" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+            <li><a href="https://github.com/deegpt" target="_blank" rel="noopener noreferrer" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+          </ul>
+        </section>
+      </section>
+    </footer>
+
+    <div id="copyright">
+      <ul><li>&copy; Deepak Gupta</li><li>Homepage redesign with analytics thumbnails</li></ul>
+    </div>
+  </div>
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
