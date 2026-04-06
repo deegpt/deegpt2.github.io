@@ -170,7 +170,7 @@
       width: 100%;
     }
 
-    /* ── 2-column side-by-side grid ── */
+    /* 2-column side-by-side grid */
     .posts {
       display: grid !important;
       grid-template-columns: repeat(2, 1fr) !important;
@@ -181,7 +181,6 @@
     .posts article {
       padding-bottom: 1rem;
       transition: transform .2s ease, box-shadow .2s ease;
-      /* reset any float/width overrides from main.css */
       float: none !important;
       width: auto !important;
       margin: 0 !important;
@@ -340,7 +339,6 @@
       background: #f7f9fc;
     }
 
-    /* ── Responsive breakpoints ── */
     @media screen and (max-width: 980px) {
       .hero-panel {
         grid-template-columns: 1fr;
@@ -348,7 +346,6 @@
       .hero-summary {
         margin-top: -2rem;
       }
-      /* Keep 2 cols on tablet */
       .posts {
         grid-template-columns: repeat(2, 1fr) !important;
         gap: 1.25rem !important;
@@ -374,7 +371,6 @@
         margin-left: 1.25rem;
         margin-right: 1.25rem;
       }
-      /* Single column on mobile */
       .posts {
         grid-template-columns: 1fr !important;
       }
@@ -391,6 +387,7 @@
         <span>SQL</span>
         <span>Python</span>
         <span>Power BI</span>
+        <span>Tableau</span>
         <span>Operational Analytics</span>
         <span>Business Intelligence</span>
       </div>
@@ -435,7 +432,7 @@
       <div id="projects" class="project-section-title">
         <span class="section-kicker">Featured Work</span>
         <h2>Selected projects from GitHub</h2>
-        <p>Recent repositories showcasing operational analytics, SQL, Python and data warehousing skills.</p>
+        <p>Recent repositories showcasing operational analytics, SQL, Python, Tableau and data warehousing skills.</p>
       </div>
 
       <article class="post featured">
@@ -460,6 +457,31 @@
       </article>
 
       <section class="posts">
+
+        <!-- NEW: Funnel & Cohort Analysis — ranked #1 in grid -->
+        <article>
+          <header>
+            <h2><a href="https://github.com/deegpt/revolut-funnel-cohort-analysis" target="_blank" rel="noopener noreferrer">Funnel &amp; Cohort Analysis | 2024</a></h2>
+          </header>
+          <a href="https://public.tableau.com/app/profile/deepak.gupta2030/viz/FunnelModelCohortAnalysis/Dashboard1" target="_blank" rel="noopener noreferrer" class="image fit thumb" style="position:relative;overflow:hidden;display:block;min-height:200px;">
+            <div class="thumb-bg" style="background-image:url('images/funnel-cohort-analysis.jpg');"></div>
+            <div class="thumb-overlay"><span>View Dashboard</span></div>
+            <span class="thumb-label">Tableau + SQL + Python</span>
+          </a>
+          <div class="project-meta">
+            <span>Cohort Analysis</span>
+            <span>Retention</span>
+            <span>Funnel Analytics</span>
+            <span>FinTech</span>
+            <span>Tableau</span>
+          </div>
+          <p>An end-to-end FinTech analytics project tracking 1.7M+ events — onboarding funnel, weekly cohort retention, SLA impact, feature adoption and plan ARPU visualised in an interactive Tableau dashboard with a dynamic Cohort Selector.</p>
+          <ul class="actions special">
+            <li><a href="https://public.tableau.com/app/profile/deepak.gupta2030/viz/FunnelModelCohortAnalysis/Dashboard1" target="_blank" rel="noopener noreferrer" class="button">View Dashboard</a></li>
+            <li><a href="https://github.com/deegpt/revolut-funnel-cohort-analysis" target="_blank" rel="noopener noreferrer" class="button">GitHub Repo</a></li>
+          </ul>
+        </article>
+
         <article>
           <header>
             <h2><a href="https://github.com/deegpt/vendor-performance-Data-Analysis-project" target="_blank" rel="noopener noreferrer">Vendor Performance Data Analysis</a></h2>
@@ -559,6 +581,7 @@
             <li><a href="https://github.com/deegpt/PortfolioProjects" target="_blank" rel="noopener noreferrer" class="button">View Project</a></li>
           </ul>
         </article>
+
       </section>
     </div>
 
